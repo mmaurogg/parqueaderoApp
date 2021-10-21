@@ -1,0 +1,53 @@
+<h4>Ingreso de automovil</h4>
+<hr>
+
+<div class="row text-right">
+    <div class="col">
+        <button class="btn btn-danger" routerLink="/parqueaderos">Regresar</button>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+
+        <form (ngSubmit)="guardar (f) " #f="ngForm">
+
+            <div class="form-group">
+                <label>id</label>
+                <input type="text" [(ngModel)]="auto.id" name="id" placeholder="id" class="form-control" disabled="disabled">
+            </div>
+
+            <div class="form-group">
+                <label>Placa</label>
+                <input type="text" [(ngModel)]="auto.placa" name="placa" placeholder="placa" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label>Responsable</label>
+                <input type="text" [(ngModel)]="auto.responsable" name="responsable" placeholder="responsable" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label>Tipo</label>
+                <input type="text" [(ngModel)]="auto.tipo" name="tipo" placeholder="tipo" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label>Ingreso</label>
+                <input type="date" [(ngModel)]="auto.ingreso" name="ingreso" value="?php echo date('Y-n-j'); ?" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label>Celda</label>
+                <input type="text" [(ngModel)]="auto.celda" name="celda" placeholder="celda" class="form-control" required>
+            </div>
+
+            <div class="form-group text-center mt-3">
+                <button type="submit" class="btn btn-primary">Guardar</button>
+            </div>
+
+
+        </form>
+
+    </div>
+</div>
